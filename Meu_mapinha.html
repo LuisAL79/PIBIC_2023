@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_316c7c386c4b238592d7243f00ce979c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_316c7c386c4b238592d7243f00ce979c" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_316c7c386c4b238592d7243f00ce979c = L.map(
+                "map_316c7c386c4b238592d7243f00ce979c",
+                {
+                    center: [-9.36107007832837, -50.34113524701032],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_316c7c386c4b238592d7243f00ce979c);
+
+            
+
+        
+    
+            var tile_layer_2803196e23f773a3b3d4c7382bd66efe = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_2803196e23f773a3b3d4c7382bd66efe.addTo(map_316c7c386c4b238592d7243f00ce979c);
+        
+    
+            var tile_layer_73df0aa696a1f1b861020a331888f073 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Tiles \u0026copy; Esri \u0026mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_73df0aa696a1f1b861020a331888f073.addTo(map_316c7c386c4b238592d7243f00ce979c);
+        
+    
+            var layer_control_8b7defaba3ed758b4f1b75361fb80732_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_2803196e23f773a3b3d4c7382bd66efe,
+                    "Esri.WorldImagery" : tile_layer_73df0aa696a1f1b861020a331888f073,
+                },
+                overlays :  {
+                },
+            };
+            let layer_control_8b7defaba3ed758b4f1b75361fb80732 = L.control.layers(
+                layer_control_8b7defaba3ed758b4f1b75361fb80732_layers.base_layers,
+                layer_control_8b7defaba3ed758b4f1b75361fb80732_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_316c7c386c4b238592d7243f00ce979c);
+
+        
+    
+            var marker_56563309ed7f805956284e8c5fb8716f = L.marker(
+                [-9.36107007832837, -50.34113524701032],
+                {
+}
+            ).addTo(map_316c7c386c4b238592d7243f00ce979c);
+        
+    
+        var custom_icon_eb1d0f7a1e2631f97b745c1c9d5d7086 = L.icon({
+  "iconUrl": "https://ederepente50.wordpress.com/wp-content/uploads/2020/12/snoopy-2.jpg",
+  "iconSize": [50, 50],
+});
+        marker_56563309ed7f805956284e8c5fb8716f.setIcon(custom_icon_eb1d0f7a1e2631f97b745c1c9d5d7086);
+        
+    
+        var popup_0963dcbab8f0c2dfbcbc92c8ffe580b2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0650bc06bf488a49239e490104917821 = $(`<div id="html_0650bc06bf488a49239e490104917821" style="width: 100.0%; height: 100.0%;">Santana do Araguaia</div>`)[0];
+                popup_0963dcbab8f0c2dfbcbc92c8ffe580b2.setContent(html_0650bc06bf488a49239e490104917821);
+            
+        
+
+        marker_56563309ed7f805956284e8c5fb8716f.bindPopup(popup_0963dcbab8f0c2dfbcbc92c8ffe580b2)
+        ;
+
+        
+    
+    
+            var circle_marker_01222c9a89b6c7114b03f3e191416c3f = L.circleMarker(
+                [-9.36107007832837, -50.34113524701032],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 34, "stroke": true, "weight": 3}
+            ).addTo(map_316c7c386c4b238592d7243f00ce979c);
+        
+    
+        var popup_6d749cef9332e96aeb58e96eff40b94b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c6b8a4e642e6827e0bcf3f365b04464c = $(`<div id="html_c6b8a4e642e6827e0bcf3f365b04464c" style="width: 100.0%; height: 100.0%;">Santana do Araguaia</div>`)[0];
+                popup_6d749cef9332e96aeb58e96eff40b94b.setContent(html_c6b8a4e642e6827e0bcf3f365b04464c);
+            
+        
+
+        circle_marker_01222c9a89b6c7114b03f3e191416c3f.bindPopup(popup_6d749cef9332e96aeb58e96eff40b94b)
+        ;
+
+        
+    
+    
+                var lat_lng_popup_b6f406b8c586b500420f9476d69d8464 = L.popup();
+                function latLngPop(e) {
+                    lat_lng_popup_b6f406b8c586b500420f9476d69d8464
+                        .setLatLng(e.latlng)
+                        .setContent("Latitude: " + e.latlng.lat.toFixed(4) +
+                                    "<br>Longitude: " + e.latlng.lng.toFixed(4))
+                        .openOn(map_316c7c386c4b238592d7243f00ce979c);
+                    }
+                map_316c7c386c4b238592d7243f00ce979c.on('click', latLngPop);
+            
+</script>
+</html>
